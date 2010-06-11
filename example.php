@@ -7,7 +7,7 @@ class TestStaticAspect
     static public function hello($that, $local = "default")
     {
         echo "Aspect say: Hello $local!\n";
-        var_dump($that); /* $that will become $this in the Joint Point context */
+        var_dump($that); /* $that will become $this in the join-point context */
     }
 }
 MethodCallPointcut::create("Test", "say_moo")
@@ -26,7 +26,7 @@ class TestObjectAspect
     public function hello($that)
     {
         echo "Test say hi: ".$this->x."\n";
-        var_dump($that); /* $that will become $this in the Joint Point context */
+        var_dump($that); /* $that will become $this in the join-point context */
     }
 }
 

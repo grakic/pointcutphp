@@ -11,7 +11,7 @@
  */
 
 /**
- * Specify a pointcut singleton where advice can be applied to the joint-point
+ * Specify a pointcut singleton where advice can be applied to the join-point
  */
 interface Pointcut
 {
@@ -46,7 +46,7 @@ interface Pointcut
 }
 
 /**
- * Pointcut singleton for class method call joint-point
+ * Pointcut singleton for class method call join-point
  *
  * Implementation uses PECL/runkit to redefine class methods. Note that PECL/runkit description
  * says "For all those things you.... probably shouldn't have been doing anyway". What this class
@@ -129,7 +129,7 @@ class MethodCallPointcut implements Pointcut
     }
 
     /**
-     * Get PHP code as string to invoke this joint-point
+     * Get PHP code as string to invoke this join-point
      */
     private function get_invoke_code($name)
     {
@@ -183,7 +183,7 @@ class MethodCallPointcut implements Pointcut
     }
 
     /**
-     * Call joint-point method, then return advice
+     * Call join-point method, then return advice
      *
      * @var Advice $f              Advice object
      * @return MethodCallPointcut  Return $this
@@ -198,7 +198,7 @@ class MethodCallPointcut implements Pointcut
     }
 
     /**
-     * Call joint-point method and save return value, call advice and then return saved value
+     * Call join-point method and save return value, call advice and then return saved value
      *
      * @var Advice $f              Advice object
      * @return MethodCallPointcut  Return $this
