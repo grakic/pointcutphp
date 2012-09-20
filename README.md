@@ -34,4 +34,6 @@ MethodCallPointcut::create("Test", "say_moo")
 PointcutPHP will now rewrite Test::say_moo() so when it gets called all applied advices will get called too. PointcutPHP will pass $this object reference from the join-point target Test instance to the Advice method if $that parameter is specified without any typehint or default value in the advice declaration. Other parameters will be imported from the target scope or defaults will be used.
 </p><p>
 Return value of before advice will be ignored but return value of after advice will be used instead of target join-point return. There is support for around advices too, where old return value is preserved and used after the advice is executed. 
+</p><p>
+License: GNU LGPL 3 or any newer
 </p>
